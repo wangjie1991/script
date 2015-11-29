@@ -1,32 +1,66 @@
 #!/bin/bash
-find -name *.txt | sort > list
 
-#depth=2
-newpath=""
-oldpath=""
+depth=3
+
+dst="/home/jay/Desktop/tmp/"
+
+dir=""
+path=""
+file=""
+
+#:<<EOF
+# cat file
+find -name "*.txt" | sort > list
 
 while read line
 do
-    newpath="."
-    for ((i=2;i<=2;i++))
+    dir=$dst"utf8/"
+
+    for (( i=2; i<depth; i++ ))
     do
         split=`echo $line | cut -d "/" -f$i`
-        newpath=$newpath"/"$split
+        dir=$dir$split"/"
     done
-    #echo "oldpath = "$oldpath
-    #echo "newpath = "$newpath
 
-    if [[ $oldpath = $newpath ]]
+    if [ ! -d $dir ]
     then
-        cat $line >> $newpath".txt"
-    else
-        if [[ $oldpath != "" ]]
-        then
-            iconv -c -f utf8 -t gbk $oldpath".txt" > $oldpath".gbk" 
-        fi
-        oldpath=$newpath
+        mkdir -p $dir
     fi
-done < list
 
+    split=`echo $line | cut -d "/" -f$depth`
+    path=$dir$split".utf8"
+
+    if [[ $file != $path ]]
+    then
+        file=$path
+    fi
+
+    cat $line >> $file
+    #echo "line="$line"  file="$file
+
+done < list
+#EOF
+
+# iconv gbk
+find $dst"utf8/" -name "*.utf8" | sort > list_utf8
+
+while read line
+do
+    file=${line##*utf8/}
+    file=${file%.utf8}
+    file=$dst"gbk/"$file".gbk"
+    dir=${file%/*}
+
+    if [ ! -d $dir ]
+    then
+        mkdir -p $dir
+    fi
+
+    iconv -c -f utf8 -t gbk $line > $file
+    #echo $file
+    #rm $line
+done < list_utf8
+
+rm list_utf8
 
 
