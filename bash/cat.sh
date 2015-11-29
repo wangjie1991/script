@@ -2,13 +2,13 @@
 
 depth=3
 
-dst="/home/jay/Desktop/tmp/"
+dst=$1
+#dst="/home/jay/Desktop/"
 
 dir=""
 path=""
 file=""
 
-#:<<EOF
 # cat file
 find -name "*.txt" | sort > list
 
@@ -36,10 +36,8 @@ do
     fi
 
     cat $line >> $file
-    #echo "line="$line"  file="$file
 
 done < list
-#EOF
 
 # iconv gbk
 find $dst"utf8/" -name "*.utf8" | sort > list_utf8
@@ -57,7 +55,6 @@ do
     fi
 
     iconv -c -f utf8 -t gbk $line > $file
-    #echo $file
     #rm $line
 done < list_utf8
 
