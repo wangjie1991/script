@@ -1,13 +1,42 @@
-    "==================================================
-    "==================================================
+    "==================================================================
+    "                       NEVER CHANGED
+    "set scroll " ^d ^u scroll half window
+    "set directory=/tmp
+    "set noautoread         "refresh when other program modify file
+    "set noautowrite        "write file before :n or :! 
+    "set prompt             "Ex mode show :
+    "==================================================================
 
 
-    set nocompatible        "vim not vi 
-    set noerrorbells        "no bell ring
-    set novisualbell        "no bell ring
+    set nocompatible    "vim not vi 
+    set noerrorbells    "no bell ring
+    set novisualbell    "no bell ring
 
-    set number
-    set cursorline
-    set ruler
+    set number          "line number
+    set ruler           "cursor position
+    set cursorline      "row line
+    "set cursorcolumn   "column line
+    set wrap            "show line in warp
+    set linebreak       "not break word in wrap
+    set showbreak=      "char between lines in wrap
+    set showmatch       "highlight () and {}
 
+    "set cmdheight=1
+    "set showcmd 
+    set laststatus=2
+    "set showmode
     set report=0            "edit some lines and report
+
+
+set shiftwidth=4
+set tabstop=4
+set smartindent
+set expandtab
+set smarttab
+set softtabstop=4
+
+
+set scrolloff=3
+    "set wrapmargin=0
+
+
