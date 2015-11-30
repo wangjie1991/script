@@ -18,23 +18,25 @@
     "set cursorcolumn   "column line
     set wrap            "show line in warp
     set linebreak       "not break word in wrap
-    set showbreak=      "char between lines in wrap
+    set showbreak=      "chars between lines in wrap
     set showmatch       "highlight () and {}
 
-    "set cmdheight=1
-    "set showcmd 
-    set laststatus=2
-    "set showmode
-    set report=0            "edit some lines and report
+    set showcmd         "show cmd in last right
+    set cmdheight=1     "cmd line number
+    set laststatus=2    "always have status line
+    set showmode        "show mode in last line
+    set report=0        "show least edit lines
 
 
 set shiftwidth=4
 set tabstop=4
-set smartindent
-set expandtab
-set smarttab
 set softtabstop=4
+set smartindent
+set smarttab
+set expandtab
 
+"set cindent
+set autoindent
 
 set scrolloff=3
     "set wrapmargin=0

@@ -3,7 +3,6 @@
 "set readonly
 "set warn
 
-set autoindent
 "set lisp
 "set list
 "set wrapmargin=0
@@ -28,7 +27,6 @@ set autoindent
 
 "set background=dark
 
-"set cindent
 "set cinkeys=0{,0},:,0#,!,o,O,e
 "set cinoptions
 "set cinwords=if, else, while, do, for, switch
