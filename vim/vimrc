@@ -1,12 +1,19 @@
     "==================================================================
     "                       NEVER CHANGED
-    "set scroll " ^d ^u scroll half window
+    "set scroll             " ^d ^u scroll half window
     "set directory=/tmp
     "set noautoread         "refresh when other program modify file
     "set noautowrite        "write file before :n or :! 
     "set prompt             "Ex mode show :
+    "set smarttab           "tab use shiftwidth first
+    "set cindent            "C program indent
+    "set fileformat=Unix/dos/mac
+    "set fileformats=Unix,dos,mac
+    "set langmenu=zh_CN.UTF-8
     "==================================================================
 
+
+    colorscheme desert
 
     set nocompatible    "vim not vi 
     set noerrorbells    "no bell ring
@@ -22,23 +29,35 @@
     set showmatch       "highlight () and {}
 
     set showcmd         "show cmd in last right
-    set cmdheight=1     "cmd line number
-    set laststatus=2    "always have status line
     set showmode        "show mode in last line
     set report=0        "show least edit lines
+    set cmdheight=1     "cmd line number
+    set laststatus=2    "always have status line
+    "set statusline=    "set status line content
+    set history=20      "cmd history number
+    set wildmenu        "auto command completion
 
+    set tabstop=2       "space number for tab
+    set shiftwidth=4    "space number for >> and <<
+    set softtabstop=4   "use space but behave like tab
+    set expandtab       "use space to sub tab
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-set smartindent
-set smarttab
-set expandtab
+    set autoindent      "copy indent in new line
+    set smartindent     "C-like indent and other language
 
-"set cindent
-set autoindent
+    set hlsearch        "highlight matches in search
+    set incsearch       "incremental searching
+    set ignorecase      "disregard case in search
+    set smartcase       "limit uppercase search
+    set magic           "allow regular pattern
+    set nowrapscan      "wrap end of file in search
 
-set scrolloff=3
-    "set wrapmargin=0
+    set scrolloff=3     "lines above and below cursor
+    set wrapmargin=80   "text width
+
+    set helplang=en             "help doc language
+    set encoding=utf-8          "encode for buffer
+    set termencoding=utf-8      "encode for terminal
+    set fileencodings=utf-8,gbk "encode list try for file
 
 

@@ -5,7 +5,6 @@
 
 "set lisp
 "set list
-"set wrapmargin=0
 
 
 "set taglength=0
@@ -15,8 +14,6 @@
 "---- vim ----
 "set comments=
 "set directory=., ~/tmp, /tmp
-"set fileformat=Unix/dos/mac
-"set fileformats=Unix,dos,mac
 "set nohidden
 "set modifiable
 "set nopaste
@@ -31,20 +28,6 @@
 "set cinoptions
 "set cinwords=if, else, while, do, for, switch
 
-"set completeopt
-"set history=20
-set hlsearch
-set incsearch
-"set nosmartcase
-"set ignorecase
-set magic
-set nowrapscan
-
-set wildmenu
-set langmenu=zh_CN.UTF-8
-set helplang=en
-set termencoding=utf8
-set encoding=utf8
 
 "set makeef=/tmp/vim##.err
 "set makeprg=make
@@ -55,6 +38,5 @@ set encoding=utf8
 "set writebackup
 
 
-"colorscheme desert
 
 
