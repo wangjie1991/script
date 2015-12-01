@@ -1,19 +1,32 @@
     "==================================================================
     "                       NEVER CHANGED
-    "set scroll             " ^d ^u scroll half window
-    "set directory=/tmp
-    "set noautoread         "refresh when other program modify file
-    "set noautowrite        "write file before :n or :! 
-    "set prompt             "Ex mode show :
-    "set smarttab           "tab use shiftwidth first
-    "set cindent            "C program indent
     "set fileformat=Unix/dos/mac
     "set fileformats=Unix,dos,mac
     "set langmenu=zh_CN.UTF-8
+    "set directory=/tmp
+    "set prompt             "Ex mode show :
+
+    "set scroll             " ^d ^u scroll half window
+    "set noautoread         "refresh when other program modify file
+    "set noautowrite        "write file before :n or :! 
+    "set smarttab           "tab use shiftwidth first
+    "set cindent            "C program indent
+    "set mouse=a            "enable mouse operation
+    "set mousehide          "hide pointer when typing
+    "set mousemodel=extend  "right button operation
+    "set nobackup           "backup before overwrite
+    "set backupdir=., ~/tmp, ~/ "backup file dir
+    "set backupext=~        "backup file suffix
+    "set backupcopy         "backup mode
+    "set writebackup        "same as backup but delete when close
+    "set nohidden
     "==================================================================
 
 
+    filetype plugin on
+
     colorscheme desert
+    "colorscheme delek
 
     set nocompatible    "vim not vi 
     set noerrorbells    "no bell ring
@@ -59,5 +72,22 @@
     set encoding=utf-8          "encode for buffer
     set termencoding=utf-8      "encode for terminal
     set fileencodings=utf-8,gbk "encode list try for file
+
+
+    " Python
+    autocmd FileType python set tabstop=4 shiftwidth=4 expandtab  
+    "autocmd FileType python map <F12> :!python %<CR>  
+
+    "-----------------------------------------------------------------  
+    " plugin - DoxygenToolkit.vim  ......................  
+    "-----------------------------------------------------------------  
+    let g:DoxygenToolkit_authorName="Asins - asinsimple AT gmail DOT com"  
+    let g:DoxygenToolkit_briefTag_funcName="yes"  
+    map <leader>da :DoxAuthor<CR>  
+    map <leader>df :Dox<CR>  
+    map <leader>db :DoxBlock<CR>  
+    map <leader>dc a /*  */<LEFT><LEFT><LEFT>  
+
+
 
 
