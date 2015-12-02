@@ -20,13 +20,12 @@
     "set backupcopy         "backup mode
     "set writebackup        "same as backup but delete when close
     "set nohidden
+    "colorscheme desert
+    "colorscheme delek
     "==================================================================
 
 
-    filetype plugin on
-
-    colorscheme desert
-    "colorscheme delek
+    "filetype plugin indent on
 
     set nocompatible    "vim not vi 
     set noerrorbells    "no bell ring
@@ -58,7 +57,7 @@
     set autoindent      "copy indent in new line
     set smartindent     "C-like indent and other language
 
-    set hlsearch        "highlight matches in search
+    "set hlsearch        "highlight matches in search
     set incsearch       "incremental searching
     set ignorecase      "disregard case in search
     set smartcase       "limit uppercase search
@@ -78,11 +77,12 @@
     autocmd FileType python set tabstop=4 shiftwidth=4 expandtab  
     "autocmd FileType python map <F12> :!python %<CR>  
 
-    "-----------------------------------------------------------------  
-    " plugin - DoxygenToolkit.vim  ......................  
-    "-----------------------------------------------------------------  
-    let g:DoxygenToolkit_authorName="Asins - asinsimple AT gmail DOT com"  
-    let g:DoxygenToolkit_briefTag_funcName="yes"  
+    "------------------------------------------------------------------
+    " plugin - DoxygenToolkit.vim
+    "------------------------------------------------------------------
+    let g:DoxygenToolkit_authorName="wangjie1991"
+    "let g:DoxygenToolkit_briefTag_funcName="yes"  
+    let g:DoxygenToolkit_licenseTag="Apache 2.0"
     map <leader>da :DoxAuthor<CR>  
     map <leader>df :Dox<CR>  
     map <leader>db :DoxBlock<CR>  
