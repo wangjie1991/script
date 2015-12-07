@@ -50,8 +50,8 @@
     set wildmenu        "auto command completion
 
     set tabstop=2       "space number for tab
-    set shiftwidth=4    "space number for >> and <<
-    set softtabstop=4   "use space but behave like tab
+    set shiftwidth=2    "space number for >> and <<
+    set softtabstop=2   "use space but behave like tab
     set expandtab       "use space to sub tab
 
     set autoindent      "copy indent in new line
