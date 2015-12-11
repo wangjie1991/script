@@ -75,7 +75,7 @@ cp $prj/tg/ts/textgrid.txt ./
 #%s;^;$prj/wc/;g
 #wq
 #end-of-script
-sed 's;^;$prj/wc/;g' textgrid.txt | awk '{print $1"\t"$2}' | iconv -c -f utf8 -t gbk -o ref.txt
+sed "s;^;$prj/wc/;g" textgrid.txt | awk '{print $1"\t"$2}' | iconv -c -f utf8 -t gbk -o ref.txt
 rm textgrid.txt
 cd ../
 
@@ -87,7 +87,7 @@ cp tg/ts/cutwave.list wc/
 #%s;XXX/;$prj/wt/;g
 #wq
 #end-of-script
-sed -i 's;XXX/;$prj/wt/;g' wc/cutwave.list
+sed -i "s;XXX/;$prj/wt/;g" wc/cutwave.list
 tl/cutWaveSeg wc/cutwave.list 8000 wc 0
 
 
