@@ -1,0 +1,19 @@
+help文档中有些英文意思表达不清楚或不详细，都在这里详细说明。
+
+
+plugin - NERDcommenter.vim
+
+3.1 key mappings
+行注释:
+<Leader>cc 注释行和视图模式下选中的内容
+<Leader>cn 没有发现和<Leader>cc有区别
+<Leader>c<space> 将选中行的注释状态切换为选中的第一行相反的状态
+<Leader>ci 选中行每行独立反转注释状态
+<Leader>cm 对被选区域用一对注释符进行注释，前面的注释对每一行都会添加注释
+<Leader>cs 添加性感的注释，代码开头介绍部分通常使用该注释
+<Leader>cy 添加注释，并复制被添加注释的部分
+<Leader>c$ 注释当前光标到改行结尾的内容
+<Leader>cA 跳转到该行结尾添加注释，并进入编辑模式
+<Leader>ca 转换注释的方式，比如： /**/和//
+<Leader>cl <Leader>cb 左对齐和左右对其，左右对其主要针对/**/
+<Leader>cu 取消注释

@@ -22,10 +22,9 @@
     "set nohidden
     "colorscheme desert
     "colorscheme delek
+    "filetype plugin indent on
     "==================================================================
 
-
-    "filetype plugin indent on
 
     set nocompatible    "vim not vi 
     set noerrorbells    "no bell ring
@@ -57,7 +56,7 @@
     set autoindent      "copy indent in new line
     set smartindent     "C-like indent and other language
 
-    "set hlsearch        "highlight matches in search
+    set hlsearch        "highlight matches in search
     set incsearch       "incremental searching
     set ignorecase      "disregard case in search
     set smartcase       "limit uppercase search
