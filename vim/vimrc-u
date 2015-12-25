@@ -72,6 +72,10 @@
     set fileencodings=utf-8,gbk "encode list try for file
 
 
+    " key modify
+    map q ge
+    map Q gE
+
     " Python
     autocmd FileType python set tabstop=4 shiftwidth=4 expandtab
     "autocmd FileType python map <F12> :!python %<CR>
@@ -82,7 +86,11 @@
     "------------------------------------------------------------------
     " plugin - conque_term.vim
     "------------------------------------------------------------------
-    let g:ConqueTerm_ToggleKey = '<F8>'
+    let g:ConqueTerm_CWInsert = 1
+    map <leader>tb :ConqueTerm bash<CR>
+    map <leader>ts :ConqueTermSplit bash<CR>
+    map <leader>tv :ConqueTermVSplit bash<CR>
+    map <leader>tt :ConqueTermTab bash<CR>
 
     "------------------------------------------------------------------
     " plugin - DoxygenToolkit.vim
