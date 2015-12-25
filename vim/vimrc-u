@@ -73,8 +73,16 @@
 
 
     " Python
-    autocmd FileType python set tabstop=4 shiftwidth=4 expandtab  
-    "autocmd FileType python map <F12> :!python %<CR>  
+    autocmd FileType python set tabstop=4 shiftwidth=4 expandtab
+    "autocmd FileType python map <F12> :!python %<CR>
+
+    " Makefile
+    autocmd FileType makefile set noexpandtab
+
+    "------------------------------------------------------------------
+    " plugin - conque_term.vim
+    "------------------------------------------------------------------
+    let g:ConqueTerm_ToggleKey = '<F8>'
 
     "------------------------------------------------------------------
     " plugin - DoxygenToolkit.vim
