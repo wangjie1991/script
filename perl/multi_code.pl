@@ -3,15 +3,15 @@ use strict;
 use threads;
 use threads::shared;
 
-my $CMD = "./compfeat -config fbanks.cfg -S INPUTSCP";
+my $CMD = "./cat.sh ./";
 if(@ARGV != 2)
 {
-	die "perl $0 [(IN)featlist] [(IN)Thread_Num]\n";
+	die "perl $0 [(IN)List] [(IN)Thread_Num]\n";
 }
 
-my ($in,$threadNum) = @ARGV;
+my ($in, $threadNum) = @ARGV;
 
-open(IN,"$in") || die "cannot open $in\n";
+open(IN, '<', "$in") || die "cannot open $in\n";
 my @feat = <IN>;
 my $each = int(($#feat+1)/$threadNum);
 my $prev = 0;
